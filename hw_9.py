@@ -34,7 +34,7 @@ def create_simple_model():
 model = create_simple_model()
 
 # Элементы интерфейса
-area = st.slider("Площадь (кв. футов)", 1000, 15000, 6000)
+area = st.slider("Площадь (кв. метров)", 1000, 15000, 6000)
 location = st.selectbox("Район", ["Обычный", "Престижный"])
 
 # Преобразуем выбор в число
@@ -50,5 +50,5 @@ if st.button("Рассчитать цену"):
     st.success(f"Прогнозируемая цена: {prediction:,.0f} рублей")
     
     # Показываем введенные данные
-    st.write(f"Площадь: {area} кв. футов")
+    st.write(f"Площадь: {area} кв. метров")
     st.write(f"Район: {location}")
